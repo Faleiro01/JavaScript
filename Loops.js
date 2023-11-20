@@ -79,10 +79,94 @@
 //     console.log(j);
 //     j++;
 // }
-const target = Math.floor(Math.random() * 10);
-let guess = Math.floor(Math.random() * 10);
-while (guess !== target) {
-    console.log(guess);
-    guess = Math.floor(Math.random() * 10);
-}
-console.log(`Target: ${target} Guess: ${guess}`);
+// const target = Math.floor(Math.random() * 10);
+// let guess = Math.floor(Math.random() * 10);
+// while (guess !== target) {
+//     console.log(guess);
+//     guess = Math.floor(Math.random() * 10);
+// }
+// console.log(`Target: ${target} Guess: ${guess}`);
+
+//while(some condition)
+//in the loop, update or attempt to make that condition
+//false
+
+// let subReddits = ['soccer', 'popheads', 'cringe', 'books'];
+
+// for (let i = 0; i < subReddits.length; i++) {
+//     console.log(subReddits[i]);
+// }
+
+// for (let sub of subReddits) {
+//     console.log(sub);
+// }
+// for (let char of 'cockadoodledoo') {
+//     console.log(char.toLocaleUpperCase());
+// }
+//
+
+// for (let i = 0; i < magicSquare.length; i++) {
+//     let row = magicSquare[i];
+//     let sum = 0;
+//     for (let j = 0; j < row.length; j++) {
+//         sum += row[j];
+//     }
+//     console.log(`${row} summed to ${sum}`);
+// }
+
+// for (let row of magicSquare) {
+//     let sum = 0;
+//     for (let num of row) {
+//         sum += num;
+//     }
+//     console.log(`${row} summed to ${sum}`);
+// }
+
+// const words1 = ['mail', 'milk', 'bath', 'black'];
+// const words2 = ['box', 'shake', 'tub', 'berry'];
+
+// for (let i = 0; i < words1.length; i++) {
+//     console.log(`${words1[i]}${words2[i]}`);
+// }
+
+// const movieReviews = {
+//     Arrival: 9.5,
+//     Alien: 9,
+//     Amelie: 8,
+//     'In Bruges': 9,
+//     Amadeus: 10,
+//     'Kill Bill': 8,
+//     'Little Miss Sunshine': 8.5,
+//     Coraline: 7.5
+// };
+// for (let movie of Object.keys(movieReviews)) {
+//     console.log(movie, movieReviews[movie]);
+// }
+// const ratings = Object.values(movieReviews);
+// let total = 0;
+// for (let r of ratings) {
+//     total += r;
+// }
+// let avg = total / ratings.length;
+// console.log(avg);
+// Excercise 1
+// for (let i = 1; i <= 10; i++) {
+//     console.log(i);
+// }
+// let start = 0;
+// while (start <= 10) {
+//     console.log(start);
+//     start++;
+// }
+// for (let i = 2; i <= 20; i += 2) {
+//     console.log(i);
+// }
+// let start = 1;
+// while (start <= 21) {
+//     console.log(start);
+//     start += 2
+// }
+
+// for (let i = 10; i >= 1; i--) {
+//     console.log(i);
+// }
