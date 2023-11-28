@@ -1,127 +1,88 @@
-// let mystery = '';
+// console.log("Hello World!")
 
-// if (mystery) {
-//     console.log("Truthy");
-// }
-// else {
-//     console.log('falsy')
-// }
-// let loggedInUser = null;
+// let matrix = [
+//     ['a', 'b', 'c'],
+//     ['d', 'e', 'f'],
+//     ['g', 'h', 'i'],
+// ];
+// for (let i = 0; i < matrix.length; i++) {
+//     let subArr = matrix[i];
 
-// if (loggedInUser) {
-//     console.log('You are logged in!')
-// }
-// else {
-//     console.log("Please log in!")
-// }
-// 1 <= 4 && 'a' === 'a'
-// let password = 'Gabriel';
+//     for (let j = 0; j < subArr.length; j++) {
+//         console.log(subArr[j]);
+//     }
+// };
+let colors = ['red', ' blue', 'cyan', 'yellow'];
 
-// if (password.length >= 6 && password.indexOf(' ') === -1) {
-//     console.log("Valid Password!");
-// }
-// else {
-//     console.log("Invalid Password, Try again!");
-
-// }
-// let num = 15;
-
-// if (num >= 1 && num <= 10) {
-//     console.log("Number is between 1 and 10")
-
-// }
-// else {
-//     console.log('Please choose a number that is between 1 and 10');
-
-// }
-// let age = 76;
-// if (age < 6 || age >= 80) {
-//     console.log("You get in for free!");
-// }
-// else {
-//     console.log("That will be $10 please.")
-// }
-// let age = 30;
-// if (age >= 65) {
-//     console.log("You can come in for free!")
-// }
-// else if (age === 30) {
-//     console.log("You're almost there, pay half!")
-// }
-// else {
-//     console.log("You'll have to pay");
-// }
-// let color = 'green';
-// if (color === 'purple' || color === 'Lilac' || color === 'violet') {
-//     console.log("Great choice!")
-// }
-// else {
-//     console.log("Pick a better color next time!")
-// }
-// let loggedInUser = 'Gabriel';
-// if (!loggedInUser) {
-//     console.log("Get out of here!")
-// }
-// else {
-//     console.log("Welcome back!")
-// }
-// let flavor = 'watermelon';
-
-// if (flavor !== 'grape' && flavor !== 'cherry') {
-//     console.log('We dont have that flavor!');
-// }
-// if (!(flavor === 'grape' || flavor === 'cherry')) {
-//     console.log("Hello");
-// }
-// let day = 9;
-
-// if (day === 1) {
-//     console.log('Monday');
-// }
-// else if (day === 2) {
-//     console.log('Tuesday');
-// }
-// else if (day === 3) {
-//     console.log('Wednesday');
-// }
-// else if (day === 4) {
-//     console.log('Thursday');
-// }
-// else if (day === 5) {
-//     console.log('Friday');
-// }
-// else if (day === 6) {
-//     console.log('Saturday');
-// }
-// else if (day === 7) {
-//     console.log('Sunday');
-// }
-// else {
-//     console.log('Invalid');
+// for (let i = 0; i < colors.length; i++) {
+//     console.log(colors[i])
 // }
 
-// switch (day) {
-//     case 1:
-//         console.log('Monday')
-//         break;
-//     case 2:
-//         console.log('Tuesday')
-//         break;
-//     case 3:
-//         console.log('Wednesday')
-//         break;
-//     case 4:
-//         console.log('Thursday')
-//         break;
-//     case 5:
-//         console.log('Friday')
-//         break;
-//     case 6:
-//         console.log('Saturday')
-//         break;
-//     case 7:
-//         console.log('Sunday')
-//         break;
-//     default:
-//         console.log('Invalid');
+// for (let color of colors) {
+//     console.log(color)
 // }
+
+// for (let char of "PURPLE RAIN!") {
+//     console.log(char)
+// }
+
+// const dog = {
+//     name: 'Pluto',
+//     age: 3,
+//     color: 'white and brown'
+// }
+
+// for (let prop in dog) {
+//     console.log(`${prop}=>${dog[prop]}`)
+// }
+// for (let key in colors) {
+//     console.log(key)
+// }
+
+//Do not use for...of with objects use for...in
+
+//DEBUGGING
+"uioashdiuyhas
+function hello() {
+    3 @4
+    3 + ; 4
+    //Syntax error
+    //Reference error
+    function sayHi() {
+        let greeting = 'hi!';
+    }
+
+    sayHi();
+    greeting;
+    //Type error
+    5();
+    "hello".splice();
+
+    const dog = {
+        first: "Rusty"
+    }
+    dog.last.toUpperCase();
+
+    //explanation
+    function hasEnoughMoneyToBuy(price, qty, balance) {
+        //RIGHT APROACH ===> const subtotal = Math.round(price * qty * 100) / 100;
+        // const subtotal = price * qty;
+        console.log("subtotal:", subtotal);
+        console.log("balance:", balance);
+        if (subtotal <= balance) {
+            return 'YOU HAVE ENOUGH MONEY!'
+        }
+        return 'SORRY, YOU NEED MORE MONEY TO BUY THAT'
+    }
+    //NOT ENOUGH MONEY 
+    hasEnoughMoneyToBuy(50.5, 10, 300)
+    hasEnoughMoneyToBuy(200.3, 5, 600.9)
+
+    //ENOUGH MONEY
+    hasEnoughMoneyToBuy(10, 6, 60)
+    hasEnoughMoneyToBuy(30, 3, 100)
+    hasEnoughMoneyToBuy(200.3, 3, 600.9)
+
+//hasEnoughMoneyToBuy(200.3, 3, 600.9) It is not enough money
+//because the subtotal is 600.90000001
+//your balance is 600.900000
