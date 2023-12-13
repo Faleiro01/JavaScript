@@ -1,16 +1,69 @@
-h1 {
-    font-size: 10rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.letter {
-    transition: color 1000ms;
-}
-
 body {
-    background-color: black;
+    font-family: 'Arial', sans-serif;
+    background-color: darkcyan;
+    text-align: center;
+}
+
+#todo-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li button:hover {
+    background-color: #e60000;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button#addBtn {
+    width: 28%;
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#addBtn:hover {
+    background-color: #45a049;
 }
