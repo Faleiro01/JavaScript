@@ -1,20 +1,19 @@
-function makeBody(color) {
-    document.body.style.backgroundColor = color;
-}
+const btn = document.querySelector('#btn');
+const memeF = document.querySelector('#memeForm');
+// const imageUrl = document.querySelector('#memeUrl');
+const topText = document.querySelector('#top-text');
+const bottomText = document.querySelector('#bottom-text');
+const imageMeme = document.querySelector('#image');
 
-function makeBodyBlack() {
-    document.body.style.backgroundColor = 'black';
-}
-const teal = document.querySelector('#teal');
-teal.onclick = function () {
-    makeBody('teal');
-}
-const eventBtn = document.querySelector('#event');
-eventBtn.addEventListener('click', function () {
-    makeBody('violet');
-})
-const h1 = document.querySelector('h1');
 
-eventBtn.addEventListener('mouseover', function () {
-    h1.style.color = 'cyan';
+btn.addEventListener('submit', function (e) {
+    e.preventDefault();
+
 })
+btn.addEventListener('click', function (e) {
+    let url = document.querySelector('#memeUrl').ariaValueMax;
+    let img = document.createElement('img');
+    img.src = url
+    document.body.appendChild(img);
+})
+

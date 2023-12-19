@@ -1,69 +1,45 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: darkcyan;
+    background-color: rgb(0, 102, 102);
+}
+
+body {
+    margin: 50px 0px;
+    padding: 10vh;
     text-align: center;
 }
 
-#todo-container {
-    max-width: 400px;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+div {
+    margin: 30vh;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+form input {
+    margin: 10px;
+    width: 40vh;
 }
 
-li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+/* #btn {
+    background-color: gray;
+    padding: 5px;
+    margin: 50px;
+    text-transform: uppercase;
+} */
+
+#btn {
+    background-color: white;
+    border: solid 2px #1ECD97;
+    color: #1ECD97;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.4s ease;
 }
 
-li.completed {
-    text-decoration: line-through;
-    color: #888;
-}
-
-li button {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+#btn:hover {
+    background-color: black;
+    color: white;
     cursor: pointer;
-}
+    padding: 4px;
+    transition: 0.3s;
 
-li button:hover {
-    background-color: #e60000;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 8px;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-
-button#addBtn {
-    width: 28%;
-    padding: 8px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button#addBtn:hover {
-    background-color: #45a049;
 }
