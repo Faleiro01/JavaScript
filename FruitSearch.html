@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Search with Autocomplete</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e95a5a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .search-container {
+    position: relative;
+  }
+
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    outline: none;
+  }
+
+  .autocomplete-box {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 298px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  .autocomplete-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .autocomplete-item:hover {
+    background-color: #f9f9f9;
+  }
+</style>
+</head>
+<body>
+
+<div class="search-container">
+  <input type="text" class="search-input" id="searchInput" placeholder="Search for fruits...">
+  <div class="autocomplete-box" id="autocompleteBox" style="display: none;"></div>
+</div>
+
+<script>
+  const fruits = [
+    "Apple",
+    "Banana",
+    "Orange",
+    "Mango",
+    "Pineapple",
+    "Grapes",
+    "Strawberry",
+    "Watermelon",
+    "Kiwi",
+    "Peach"
+  ];
+
+  const searchInput = document.getElementById('searchInput');
+  const autocompleteBox = document.getElementById('autocompleteBox');
+
+  searchInput.addEventListener('input', function() {
+    const searchText = this.value.toLowerCase();
+    let matches = fruits.filter(fruit => fruit.toLowerCase().startsWith(searchText));
+    showAutocomplete(matches);
+  });
+
+  function showAutocomplete(matches) {
+    if (matches.length === 0) {
+      autocompleteBox.style.display = 'none';
+      return;
+    }
+
+    const html = matches.map(match => `<div class="autocomplete-item">${match}</div>`).join('');
+    autocompleteBox.innerHTML = html;
+    autocompleteBox.style.display = 'block';
+
+    document.querySelectorAll('.autocomplete-item').forEach(item => {
+      item.addEventListener('click', function() {
+        searchInput.value = this.textContent;
+        autocompleteBox.style.display = 'none';
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!autocompleteBox.contains(event.target) && event.target !== searchInput) {
+        autocompleteBox.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
